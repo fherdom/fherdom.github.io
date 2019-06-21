@@ -5,32 +5,49 @@ date:   2019-06-21 11:24:59 +0100
 categories: django tutorial
 ---
 
-Este tutorial es la traducción al español del [TaskBuster Django Tutorial](http://www.marinamele.com/taskbuster-django-tutorial), al que le hemos incluido alguna mejora y adaptado a la última versión LTS (Long Term Support) de [Django], la 2.2.2.
+Ya era hora de hacer un tutorial de [Django] y de camino refrescar los aspectos a tener en cuenta para futuros proyectos.
 
+Este tutorial está basado en [TaskBuster Django Tutorial](http://www.marinamele.com/taskbuster-django-tutorial) adaptándolo a la última versión [LTS] (Long Term Support) de [Django], la 2.2.2.
 
-Vamos a crear un proyecto Django desde '0' y luego aplicarle una serie de modificaciones que nos ayudarán a comprender mejor la filosofía del framework, serían 'mis buenas prácticas'.
+Vamos a crear un proyecto Django desde '0' o, como dicen, 'from scratch', con la intención de que sea un esqueleto o 'template'.
 
-Nos centraremos en un proyecto llamadao 'skeleton'
+Quiero agradecer a Marina Mele por el estupendo trabajo en el proyecto TaskBuster.
 
-Quiero agradecer a Marina Mele por el estupendo trabajo realizado en 20
+Repartiremos el tuturial en varias entradas del blog cuyo índice inicial podría ser este:
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+1. Creación del entorno virtual y del proyecto [Django]
+    * Creación del entorno de trabajo
+    * Instalación de Django 2.2.2 (LTS)
+    * Trabajar con Sublime Text
+    * [Obedece a la cabra](http://www.obeythetestinggoat.com/)
+    * Crear el proyecto Django
+    * Arrancar el servidor de desarrollo.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+2. Control de versiones (git) y estructura de ficheros.
 
-Jekyll also offers powerful support for code snippets:
+3. Creación de la página principal. Agregar [TDD] (Test Driven Development)
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+4. Herencia de plantillas, ficheros del sitio web y pruebas con cobertura.
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+5. Internacionalizción y localización. Idiomas y zonas horarias
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+6. Documentación del proyecto.
+    * Instalación y configuración de Sphinx
+
+7. Instalación y configuración de la base de datos
+    * PostgreSQL
+    * MySQL
+    * Spatialite
+
+8. Autenticación
+    * Google
+    * Twitter
+    * CAS (Central Authentication Service )
+
+9. Creación de modelos, relaciones y señales.
+
+10. Django Admin
+
 [Django]: https://docs.djangoproject.com/en/2.2/
+[TDD]: https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas
+[LTS]: https://www.djangoproject.com/download/
