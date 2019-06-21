@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Utilizar Spatialite como TEST de PostGIS"
+title:  "Spatialite como 'TEST Database' de PostGIS"
 date:   2019-06-12 11:24:59 +0100
 categories: django spatialite postgis
 ---
@@ -31,5 +31,5 @@ Ran 2 tests in 0.007s
 
 OK
 Preserving test database for alias 'default'...
-(env) fherdom@felix-lubuntu:~/dev/python/django/sitcanapi_project$ 
+(env) fherdom@felix-lubuntu:~/dev/python/django/sitcanapi_project$
 ```
