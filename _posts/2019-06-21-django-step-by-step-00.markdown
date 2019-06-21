@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tutorial Django"
+title:  "Tutorial paso a paso con Django Framework"
 date:   2019-06-21 11:24:59 +0100
 categories: django tutorial
 ---
@@ -15,7 +15,7 @@ Quiero agradecer a Marina Mele por el estupendo trabajo en el proyecto TaskBuste
 
 Repartiremos el tuturial en varias entradas del blog cuyo índice inicial podría ser este:
 
-1. Creación del entorno virtual y del proyecto [Django]
+1. [Creación del entorno virtual y del proyecto Django]({% post_url 2019-06-21-django-step-by-step-01 %})
     * Creación del entorno de trabajo
     * Instalación de Django 2.2.2 (LTS)
     * Trabajar con Sublime Text

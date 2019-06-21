@@ -44,6 +44,8 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+kramdown:
+    auto_ids: true
 
 defaults:
   - scope:
