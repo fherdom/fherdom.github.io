@@ -54,6 +54,8 @@ subl django_template_project
 
 Instalaremos el paquete 'virtualenv' de Sublime y lo activamos: Virtualenv: Activate, seleccionando la carpeta correspondiente.
 
+No se ve!!!
+
 ![subl]({{ "/assets/img/posts/2019-06-21-django-step-by-step-01_subl.png" | relative_url }}){:class="img-responsive"}
 
 ### [Obedece a la cabra](http://www.obeythetestinggoat.com/)
