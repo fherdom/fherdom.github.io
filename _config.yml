@@ -47,6 +47,22 @@ plugins:
 kramdown:
     auto_ids: true
 
+jekyll_compose:
+    auto_open: true
+
+    draft_default_front_matter:
+      description:
+      image:
+      category:
+      tags:
+    post_default_front_matter:
+      description:
+      image:
+      category:
+      tags:
+      published: false
+      sitemap: false    
+
 defaults:
   - scope:
       path: "assets/img"

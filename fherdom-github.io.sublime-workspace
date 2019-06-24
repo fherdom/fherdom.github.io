@@ -12,10 +12,29 @@
 	"buffers":
 	[
 		{
-			"file": "README.md",
+			"file": "_posts/2019-06-21-django-step-by-step-00.markdown",
 			"settings":
 			{
-				"buffer_size": 294,
+				"buffer_size": 1877,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_posts/2019-06-21-django-step-by-step-01.markdown",
+			"settings":
+			{
+				"buffer_size": 2257,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_config.yml",
+			"settings":
+			{
+				"buffer_size": 1811,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -52,10 +71,17 @@
 	},
 	"expanded_folders":
 	[
-		"/home/felix/dev/jekyll/fherdom.github.io"
+		"/home/felix/dev/jekyll/fherdom.github.io",
+		"/home/felix/dev/jekyll/fherdom.github.io/_drafts",
+		"/home/felix/dev/jekyll/fherdom.github.io/_posts",
+		"/home/felix/dev/jekyll/fherdom.github.io/assets",
+		"/home/felix/dev/jekyll/fherdom.github.io/assets/img",
+		"/home/felix/dev/jekyll/fherdom.github.io/assets/img/posts"
 	],
 	"file_history":
 	[
+		"/home/felix/dev/python/django/django_template_project/django_template_project",
+		"/home/felix/dev/jekyll/fherdom.github.io/_drafts/2019-06-21-django-step-by-step-01.markdown",
 		"/home/felix/dev/dojo/cv/index.html"
 	],
 	"find":
@@ -91,24 +117,54 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "README.md",
-					"semi_transient": true,
+					"file": "_posts/2019-06-21-django-step-by-step-00.markdown",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 294,
+						"buffer_size": 1877,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								220,
-								220
+								1320,
+								1320
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_posts/2019-06-21-django-step-by-step-01.markdown",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2257,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2102,
+								2103
 							]
 						],
 						"settings":
@@ -116,10 +172,38 @@
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 221.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_config.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1811,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1734,
+								1734
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -202,7 +286,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 232.0,
+	"side_bar_width": 395.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
