@@ -81,7 +81,7 @@ $ source env/bin/activate
 (env)$ vim functional_tests/all_users.py 
 ```
 
-```python
+{% highlight python linenos %}
 from selenium import webdriver
 import unittest
  
@@ -105,7 +105,8 @@ class NewVisitorTest(unittest.TestCase):
  
 if __name__ == '__main__':
     unittest.main(warnings='ignore')
-```
+{% endhighlight %}
+
 
 `(env)$ python functional_tests/all_users.py`
 
