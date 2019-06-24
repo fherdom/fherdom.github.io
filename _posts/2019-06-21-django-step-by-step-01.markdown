@@ -23,33 +23,37 @@ Para empezar el tutorial necesitamos **Python3** y el gestor de paquetes **pip**
 También necesitaremos un editor. Personalemente recomiendo *SublimeText* pero pueden utilizar el que más les guste (incluso *vim*). Aquí hay una guía para configurar un proyecto en este [SublimeText][1].
 
 ```bash
-cd dev/python/django/django_template_project
-python3 -m venv env`
-source env/bin/activate
-(env) felix@felix-XPS13-9333:~/dev/python/django/django_template_project$
-
+$ cd dev/python/django/django_template_project
+$ python3 -m venv env`
+$ source env/bin/activate
+(env)$ 
 ```
 
 Con esto crearemos una subcarpeta `env` que contendrá el intérprete de `Python3` y los paquetes que posteriormente instalaremos mediante `pip`.
 
 Repetiremos el comando para crear un entorno alternativo que simulará la puesta en *Producción* de nuestro proyecto.
 
-`python3 -m venv env_prod`
-
+```
+(env)$ deactivate
+$
+$ python3 -m venv env_prod
+(env_prod)$
+```
 
 ### Instalación de Django 2.2.2 (LTS)
 
 ```
-source env/bin/activate
-pip install Django==2.2..2
+(env_prod)$ deactivate
+$ source env/bin/activate
+(env)$ pip install Django==2.2.2
 ```
 
 
 ### Trabajar con Sublime Text
 
 ```
-cd ..
-subl django_template_project
+(env)$ cd ..
+(env)$ subl django_template_project
 ```
 
 Instalaremos el paquete 'virtualenv' de Sublime y lo activamos: Virtualenv: Activate, seleccionando la carpeta correspondiente.
@@ -58,9 +62,65 @@ Instalaremos el paquete 'virtualenv' de Sublime y lo activamos: Virtualenv: Acti
 
 ### [Obedece a la cabra](http://www.obeythetestinggoat.com/)
 
+>
+Escribe el test antes de escribir el código.
+>
+
+Crearemos un test que comprueba el título de la página de bienvenida cuando arrancamos el servidor de desarrollo para nuestro nuevo proyecto Django.
+
+Activamos el entorno de pruebas
+
+```bash
+$ source env/bin/activate
+(env)$ pip install --upgrade selenium
+```
+
+```bash
+(env)$ mkdir functional_tests
+(env)$ touch functional_tests/all_users.py
+(env)$ vim functional_tests/all_users.py 
+```
+
+```python
+from selenium import webdriver
+import unittest
+ 
+ 
+class NewVisitorTest(unittest.TestCase):
+ 
+    def setUp(self):
+        self.browser = webdriver.Firefox()
+        self.browser.implicitly_wait(3)
+ 
+    def tearDown(self):
+        self.browser.quit()
+ 
+    def test_it_worked(self):
+        self.browser.get('http://localhost:8000')
+        self.assertIn(
+            'Django: the Web framework for perfectionists with deadlines.',
+            self.browser.title
+        )
+
+ 
+if __name__ == '__main__':
+    unittest.main(warnings='ignore')
+```
+
+`(env)$ python functional_tests/all_users.py`
+
 ### Crear el proyecto Django
+
+```
+(env)$ pwd
+-> /home/fherdom/dev/python/django/django_template_project
+(env)$ django-admin.py startproject django_template_project .
+```
 
 ### Arrancar el servidor de desarrollo.
 
+```
+(env)$ python manage.py runserver
+```
 
 [1]: http://www.marinamele.com/2014/03/install-and-configure-sublime-text-3.html
