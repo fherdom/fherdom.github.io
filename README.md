@@ -14,4 +14,6 @@ ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux-gnu]
 `$ gem install bundler`
 
 
+5. `bundle exec jekyll serve -D --livereload`
+
 [Ruby]: https://www.ruby-lang.org/en/downloads/

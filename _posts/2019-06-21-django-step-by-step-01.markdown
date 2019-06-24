@@ -41,7 +41,7 @@ Repetiremos el comando para crear un entorno alternativo que simulará la puesta
 
 ```
 source env/bin/activate
-pip install Django==2.2..2
+pip install Django==2.2.2
 ```
 
 
@@ -54,11 +54,56 @@ subl django_template_project
 
 Instalaremos el paquete 'virtualenv' de Sublime y lo activamos: Virtualenv: Activate, seleccionando la carpeta correspondiente.
 
-No se ve!!!
-
 ![subl]({{ "/assets/img/posts/2019-06-21-django-step-by-step-01_subl.png" | relative_url }}){:class="img-responsive"}
 
 ### [Obedece a la cabra](http://www.obeythetestinggoat.com/)
+
+>
+Escribe el test antes de escribir el código.
+>
+
+Crearemos un test que comprueba el título de la página de bienvenida cuando arrancamos el servidor de desarrollo para nuestro nuevo proyecto Django.
+
+Activamos el entorno de pruebas
+
+```
+source env/bin/activate
+pip install --upgrade selenium
+```
+
+```
+mkdir functional_tests
+touch functional_tests/all_users.py
+vim functional_tests/all_users.py 
+```
+
+```python
+from selenium import webdriver
+import unittest
+ 
+ 
+class NewVisitorTest(unittest.TestCase):
+ 
+    def setUp(self):
+        self.browser = webdriver.Firefox()
+        self.browser.implicitly_wait(3)
+ 
+    def tearDown(self):
+        self.browser.quit()
+ 
+    def test_it_worked(self):
+        self.browser.get('http://localhost:8000')
+        self.assertIn(
+            'Django: the Web framework for perfectionists with deadlines.',
+            self.browser.title
+        )
+
+ 
+if __name__ == '__main__':
+    unittest.main(warnings='ignore')
+```
+
+`python functional_tests/all_users.py`
 
 ### Crear el proyecto Django
 
