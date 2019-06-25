@@ -59,9 +59,12 @@ processes=4
 threads=2
 max-requests=5000
 vacuum=true
+logger=syslog:sitcanapi_project
 ```
 
-y probamos con: `uwsgi --ini sitcanapi_project.ini`
+y probamos con: `uwsgi --ini sitcanapi_project.ini`.
+
+Esta configuración pueder se mejorable. Fíjese que escribimos en `syslog`.
 
 Test [http://192.168.20.65:49152](http://192.168.20.65:49152)
 
@@ -111,6 +114,7 @@ processes=4
 threads=2
 max-requests=5000
 vacuum=true
+logger=syslog:sitcanapi_project
 ```
 
 ```bash
