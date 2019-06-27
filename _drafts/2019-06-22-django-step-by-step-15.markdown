@@ -7,6 +7,7 @@ categories: django tutorial
 ---
 
 ## Git: Entorno en 192.168.20.X
+-------------------------------
 
 ```bash
 $ sudo apt update

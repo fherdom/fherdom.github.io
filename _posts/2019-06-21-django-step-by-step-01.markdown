@@ -9,6 +9,9 @@ Crear un buen entorno de trabajo es muy importante porque ganamos en productivid
 
 Los entornos virtuales nos ayudan a organizar las dependencias de cada proyecto y un buen editor nos ayuda a programar, dándonos ayuda sobré los métodos disponibles de un objeto o resaltar la sintaxis para una mejor comprensión del código.
 
+Pasos
+-----
+
 * [Creación del entorno de trabajo](#creacion-del-entorno-de-trabajo)
 * Instalación de Django 2.2.2 (LTS)
 * Trabajar con Sublime Text
@@ -16,7 +19,8 @@ Los entornos virtuales nos ayudan a organizar las dependencias de cada proyecto 
 * Crear el proyecto Django
 * Arrancar el servidor de desarrollo.
 
-### Creación del entorno de trabajo
+Creación del entorno de trabajo
+-------------------------------
 
 Para empezar el tutorial necesitamos **Python3** y el gestor de paquetes **pip**.
 
@@ -24,7 +28,7 @@ También necesitaremos un editor. Personalemente recomiendo *SublimeText* pero p
 
 ```bash
 $ cd dev/python/django/django_template_project
-$ python3 -m venv env`
+$ python3 -m venv env
 $ source env/bin/activate
 (env)$ 
 ```
@@ -40,7 +44,8 @@ $ python3 -m venv env_prod
 (env_prod)$
 ```
 
-### Instalación de Django 2.2.2 (LTS)
+Instalación de Django 2.2.2 (LTS)
+---------------------------------
 
 ```
 (env_prod)$ deactivate
@@ -49,7 +54,8 @@ $ source env/bin/activate
 ```
 
 
-### Trabajar con Sublime Text
+#### Trabajar con Sublime Text
+
 
 ```
 (env)$ cd ..
@@ -81,7 +87,7 @@ $ source env/bin/activate
 (env)$ vim functional_tests/all_users.py 
 ```
 
-{% highlight python linenos %}
+{% highlight python%}
 from selenium import webdriver
 import unittest
  
@@ -110,7 +116,24 @@ if __name__ == '__main__':
 
 `(env)$ python functional_tests/all_users.py`
 
-### Crear el proyecto Django
+Si nos aparece este error
+
+`FileNotFoundError: [Errno 2] No such file or directory: 'geckodriver': 'geckodriver'`
+
+es porque tenemos que instalar del driver de Firefox para **selenium**. Nos vamos a [https://github.com/mozilla/geckodriver/releases](https://github.com/mozilla/geckodriver/releases) y descargamos la versión según nuestro sistema operativo. En mi caso, utilizaré [geckodriver-v0.24.0-linux64.tar.gz](https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz)
+
+Lo descomprimimos y creamos un enlace simbólico en la carpeta `/usr/local/bin`. Es decir,
+
+`sudo ln -s /home/felix/apps/selenium/geckodriver-v0.24.0-linux64/geckodriver /usr/local/bin/`
+
+Volvemos a lanzar el test y saldrá
+
+`ERROR: test_it_worked (__main__.NewVisitorTest)`
+
+debido a que no tenemos en ejecución el proyecto de *Django*
+
+Crear el proyecto Django
+------------------------
 
 ```
 (env)$ pwd
@@ -118,10 +141,40 @@ if __name__ == '__main__':
 (env)$ django-admin.py startproject django_template_project .
 ```
 
-### Arrancar el servidor de desarrollo.
+```
+(env) $ tree -I 'env*|__pycache__'
+.
+├── db.sqlite3
+├── django_template_project
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── django-template-project.sublime-project
+├── django-template-project.sublime-workspace
+├── functional_tests
+│   └── all_users.py
+├── geckodriver.log
+└── manage.py
+```
+
+
+Arrancar el servidor de desarrollo
+----------------------------------
 
 ```
 (env)$ python manage.py runserver
+```
+
+Abrimos otra sesión de 'terminal' y probamos el test. Ahora si vemos un resultado correcto.
+
+```bash
+(env) $ python functional_tests/all_users.py 
+.
+----------------------------------------------------------------------
+Ran 1 test in 3.343s
+
+OK
 ```
 
 [1]: http://www.marinamele.com/2014/03/install-and-configure-sublime-text-3.html
