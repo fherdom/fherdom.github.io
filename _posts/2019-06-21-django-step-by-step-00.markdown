@@ -36,6 +36,10 @@ Repartiremos el tuturial en varias entradas del blog cuyo índice inicial podrí
 
 7. Instalación y configuración de la base de datos
     * PostgreSQL
+        * tenemos instalado postgresql 11
+        * psql -d example -U postgres
+        * y habilitado PostGIS con datos de NY cargados
+
     * MySQL
     * Spatialite
 
