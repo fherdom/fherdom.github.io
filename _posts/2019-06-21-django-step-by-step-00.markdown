@@ -48,6 +48,10 @@ Repartiremos el tuturial en varias entradas del blog cuyo índice inicial podrí
 
 10. Django Admin
 
+11. Django Rest Framework
+
+12. uWSGI + Nginx + systemD
+
 [Django]: https://docs.djangoproject.com/en/2.2/
 [TDD]: https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas
 [LTS]: https://www.djangoproject.com/download/
