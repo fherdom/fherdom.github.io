@@ -23,7 +23,7 @@ Repartiremos el tuturial en varias entradas del blog cuyo índice inicial podrí
     * Crear el proyecto Django
     * Arrancar el servidor de desarrollo.
 
-2. Control de versiones (git) y estructura de ficheros.
+2. [Control de versiones (git) y estructura de ficheros.]({% post_url 2019-06-21-django-step-by-step-02 %})
 
 3. Creación de la página principal. Agregar [TDD] (Test Driven Development)
 

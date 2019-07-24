@@ -11,7 +11,6 @@ Eliminaremos la `'SECRET_KEY'` para mantenerla segura.
 
 Creamos un repositorio de datos para el versionado.
 
-
 * Entornos virtuales y ficheros de requisitos
 * Diferentes `settings.py` para cada entorno
 * `Settings.py` del entorno de producción con `Debug=False`
