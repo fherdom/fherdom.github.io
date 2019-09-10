@@ -179,20 +179,20 @@ Ejecutamos: `python manage.py django_template_project.test`
 
 Con respecto a las plantillas, en *base.html* incluimos:
 
-```html
+{% raw %}
 <head>
     ...
     <title>{% block head_title %}{% endblock %}</title>
     ...
 </head>
-```
+{% endraw %}
 
 y creamos *index.html* en *django_template_project/templates/core* con el siguiente contenido:
 
-```
+{% raw %}
 {% extends "base.html" %}
 {% block head_title %}TaskBuster Django Tutorial{% endblock %}
-```
+{% endraw %}
 
 `python manage.py test django_template_project.test`
 
